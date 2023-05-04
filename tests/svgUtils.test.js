@@ -1,4 +1,4 @@
-const { createSVG } = require('./svgUtils');
+const { createSVG } = require('./lib/svgUtils');
 
 describe('createSVG', () => {
   test('should generate the correct SVG template', () => {
