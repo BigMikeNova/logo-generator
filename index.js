@@ -25,17 +25,22 @@ const questions = [
     name: 'shapeColor',
     message: 'Enter shape color (keyword or hexadecimal):',
   },
+  {
+    type: 'input',
+    name: 'fileName',
+    message: 'Enter the name for your file',
+  }
 ];
 
 // Prompt the user for input using inquirer
 inquirer.prompt(questions).then((answers) => {
-  const { text, textColor, shape, shapeColor } = answers;
+  const { text, textColor, shape, shapeColor, fileName } = answers;
 
   // Generate SVG content
   const svgContent = createSVG(text, textColor, shape, shapeColor);
 
   // Write SVG content to file
-  fs.writeFile('logo.svg', svgContent, (err) => {
+  fs.writeFile(`${fileName}.svg`, svgContent, (err) => {
     if (err) {
       console.error('Error writing SVG file:', err);
     } else {
