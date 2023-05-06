@@ -10,7 +10,6 @@ Clone this repository to your local machine and navigate to the project director
 
 
 git clone https://github.com/BigMikeNova/logo-generator
-cd application
 
 
 Install the necessary dependencies:
