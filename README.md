@@ -58,10 +58,6 @@ You can enter a color keyword or a hexadecimal number when prompted for shape co
 
 Once you have entered input for all the prompts, the application will generate an SVG file named `fileName.svg` and print "Generated fileName.svg" in the command line.
 
-## Contributing
-
-If you would like to contribute to this project, please submit a pull request.
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
