@@ -37,14 +37,14 @@ inquirer.prompt(questions).then((answers) => {
   const { text, textColor, shape, shapeColor, fileName } = answers;
 
   // Generate SVG content
-  const svgContent = createSVG(text, textColor, shape, shapeColor);
+  const svgContent = createSVG(text, textColor, shape, shapeColor, fileName);
 
   // Write SVG content to file
   fs.writeFile(`${fileName}.svg`, svgContent, (err) => {
     if (err) {
       console.error('Error writing SVG file:', err);
     } else {
-      console.log('Generated logo.svg');
+      console.log('Generated ${fileName}.svg');
     }
   });
 });
